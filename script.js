@@ -1,9 +1,10 @@
 let cont = document.getElementById("rebour");
 
-function timer(seconde){
-    for(let i = 0;i<seconde;i++){
-        cont.innerHTML = i.toString()
-    }
-}
+let seconde = 1
 
-timer(prompt("nombre"))
+window.setInterval(function (){
+    cont.innerHTML = seconde.toString();
+    console.log(seconde);
+    cont.style.animationName = "anim"
+    seconde++
+},1000);
