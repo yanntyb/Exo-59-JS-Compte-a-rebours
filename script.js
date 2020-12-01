@@ -1,10 +1,13 @@
 let cont = document.getElementById("rebour");
 
-let seconde = 1
+let seconde = parseInt(prompt("max ?"))
 
-window.setInterval(function (){
+let interval = window.setInterval(function (){
     cont.innerHTML = seconde.toString();
     console.log(seconde);
-    cont.style.animationName = "anim"
-    seconde++
+    cont.style.animationName = "anim";
+    seconde--;
+    if(seconde === -1){
+        clearInterval(interval)
+    };
 },1000);
